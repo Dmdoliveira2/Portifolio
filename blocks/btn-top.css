@@ -1,0 +1,27 @@
+#btnTopo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  /* Escondido por padrão */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#btnTopo::before {
+  content: '↑';
+}
+
+#btnTopo:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}

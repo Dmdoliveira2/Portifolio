@@ -1,0 +1,62 @@
+/* Menu Hamburguer - escondido no desktop */
+.menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.menu-hamburguer span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Animação do X quando aberto */
+.menu-hamburguer.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-hamburguer.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-hamburguer.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Em telas pequenas (mobile) */
+@media (max-width: 768px) {
+  .menu-hamburguer {
+    display: flex;
+    /* Mostra o hamburguer */
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Escondido fora da tela */
+    width: 70%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    transition: right 0.3s ease;
+    padding-top: 80px;
+  }
+
+  .header__nav.active {
+    right: 0;
+    /* Aparece deslizando */
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
