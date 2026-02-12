@@ -34,7 +34,22 @@
 
 @media (max-width: 768px) {
   .about__description {
-    font-size: 1rem;
+    text-align: justify;
     padding: 0 20px;
+    margin: 0 auto;
+    width: 700px;
+    height: auto;
+
+  }
+
+  .about__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f57711;
+  }
+
+
+  .about__description span {
+    font-size: 1rem;
   }
 }

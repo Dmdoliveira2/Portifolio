@@ -1,4 +1,5 @@
 /* Menu Hamburguer - escondido no desktop */
+
 .menu-hamburguer {
   display: none;
   flex-direction: column;
@@ -35,6 +36,7 @@
 @media (max-width: 768px) {
   .menu-hamburguer {
     display: flex;
+    margin-right: 20px;
     /* Mostra o hamburguer */
   }
 
